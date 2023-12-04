@@ -1,0 +1,948 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Kaisei Decol', serif;
+    font-family: 'Kumar One', serif;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+/* ここからヘッダーラップ */
+#headerWrap {
+    background-color: #FF2121;
+    position: relative;
+    z-index: 10;
+
+    /* ここからヘッダーコンテナー（ロゴとナブ） */
+    #headerContainer {
+        max-width: 1580px;
+        height: 240px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        @media (720px <=width <=1000px) {
+            max-width: 580px;
+            height: 200px;
+            margin: 0 auto;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        @media (width < 720px) {
+            min-width: 337px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            align-content: center;
+
+        }
+
+        .logoImg {
+            width: 300px;
+            height: 220px;
+            background-image: url(../image/logo02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media (width <=1000px) {
+                width: 150px;
+                height: 110px;
+            }
+        }
+
+
+    }
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Kumar One', serif;
+
+
+    @media (width <=1000px) {
+        /*画面幅が480px以上1000px以下の時に反映するCSSを記述　*/
+        max-width: 337px;
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.mainImg {
+    width: 100%;
+    height: calc(100vh - 240px);
+    background-image: url(../image/mainImg.jpeg);
+    background-size: cover;
+    position: relative;
+    z-index: 100;
+
+    @media (width <=1000px) {
+        background-position: center;
+    }
+}
+
+/* ここまでheader */
+
+
+/* ここからmain */
+
+h2,
+h3 {
+    font-family: 'Kaisei Decol', serif;
+
+}
+
+p {
+    font-family: 'Sawarabi Mincho', serif;
+    line-height: 1.5em;
+}
+
+
+main {
+    background-color: #FF2121;
+    position: relative;
+
+    /* 横のナルトライン */
+
+    .narutoLine01 {
+        width: 20px;
+        height: 100vh;
+        background-image: url(../image/narutoLineImg.png);
+        background-size: contain;
+        background-repeat: repeat-y;
+        position: fixed;
+        top: 0;
+        left: 4.5%;
+
+        @media (width <=420px) {
+            display: none;
+        }
+    }
+
+    .narutoLine02 {
+        width: 20px;
+        height: 100vh;
+        background-image: url(../image/narutoLineImg.png);
+        background-size: contain;
+        background-repeat: repeat-y;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 4.5%;
+
+        @media (width <=420px) {
+            display: none;
+        }
+    }
+
+    /* ここから装飾用笹 */
+    .banboo1 img,
+    .banboo2 img,
+    .banboo3 img,
+    .banboo4 img {
+        max-width: 270px;
+        height: auto;
+
+        @media (width <=1200px) {
+            max-width: 170px;
+            height: auto;
+        }
+    }
+
+    .banboo1 {
+        position: absolute;
+        top: 322px;
+        right: -8px;
+
+
+        @media (width <=720px) {
+            display: none;
+        }
+    }
+
+    .banboo2 {
+        position: absolute;
+        top: 700px;
+        left: -8px;
+
+
+        @media (width <=720px) {
+            display: none;
+        }
+    }
+
+
+    .banboo3 {
+        position: absolute;
+        top: 3225px;
+        left: -8px;
+
+
+        @media (width <=720px) {
+            display: none;
+        }
+    }
+
+    .banboo4 {
+        position: absolute;
+        top: 5050px;
+        right: -8px;
+
+
+        @media (width <=720px) {
+            display: none;
+        }
+    }
+
+
+    .pandaImg img {
+        width: 30%;
+        min-width: 200px;
+
+        @media (width <=720px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/* ここから装飾用パンダ */
+.pandaImg01 img,
+.pandaImg02 img {
+    max-width: 375px;
+    height: auto;
+
+    @media (width <=1000px) {
+        max-width: 200px;
+        height: auto;
+
+    }
+}
+
+.pandaImg01 {
+    position: absolute;
+    bottom: 500px;
+    left: -8px;
+
+    @media (width <=720px) {
+        display: none;
+    }
+}
+
+.pandaImg02 {
+    position: absolute;
+    bottom: -2rem;
+    right: -8px;
+
+    @media (width <=720px) {
+        display: none;
+    }
+}
+
+.narutoLine {
+    width: 53px;
+    background-image: url(../image/naruto.png);
+}
+
+/* ここからメインラッパー */
+#mainWrapper {
+    /* max-width: 1580px; */
+    width: 80%;
+    background-color: #ffffff;
+    margin: 0 auto;
+
+    @media (width <=810px) {
+        width: 70%;
+    }
+
+    @media (width <=400px) {
+        width: 85%;
+    }
+
+
+
+    #mainWrap {
+        /* max-width: 1240px; */
+        width: 78%;
+        margin: 0 auto;
+        padding-top: 3rem;
+
+
+        #homeWrap {
+            position: relative;
+            width: 100%;
+
+            .chachcopy {
+                width: 100%;
+                margin: 0 auto;
+
+                @media (width <=1000px) {
+                    width: 500px;
+                    height: 350px;
+                    background-image: url(../image/chachcopy02.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+
+                @media (width <=810px) {
+                    max-width: 330px;
+                    height: 220px;
+                }
+
+                @media (width <=500px) {
+                    max-width: 200px;
+                    height: 150px;
+                }
+
+            }
+
+            .chachcopy img {
+                margin-top: 7rem;
+                margin-bottom: 9rem;
+                margin: 0 auto;
+                width: 100%;
+
+                @media (width <=1000px) {
+                    display: none;
+                }
+
+            }
+
+            .tentyouSyoukai {
+                width: 100%;
+                height: 380px;
+                padding-top: 5rem;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 16rem;
+                position: relative;
+                z-index: 10000;
+
+                @media (width <=1000px) {
+                    height: auto;
+                    padding-top: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 8rem;
+                }
+
+                .panpan {
+                    width: 50%;
+                    height: 100%;
+                    background-image: url(../image/panpan.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+
+                    @media (width <=1000px) {
+                        width: 100%;
+                        height: 350px;
+                        background-position: center;
+                    }
+
+                }
+
+                .textBox {
+                    display: flex;
+                    width: 40%;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    justify-content: center;
+
+                    @media (width <=1000px) {
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 2rem;
+                    }
+
+                    & h2 {
+                        font-size: 2.5rem;
+                        font-weight: 500;
+
+                        @media (width <=740px) {
+                            max-width: 17rem;
+                            margin: 0 auto;
+                        }
+
+
+                        @media (width <=420px) {
+                            font-size: 2rem;
+                            font-weight: 500;
+                            color: #FF2121;
+                        }
+
+                        @media (width <=400px) {
+                            max-width: 12rem;
+                        }
+                    }
+
+                    & p {
+                        @media (width <=720px) {
+                            width: 100%;
+                            /* text-align: center; */
+                            margin: 0 auto;
+
+                        }
+                    }
+                }
+            }
+
+            .tentyouBack {
+                width: 90%;
+                height: 30%;
+                background-color: rgba(51, 49, 50, 0.1);
+                position: absolute;
+                top: 25%;
+                left: 20%;
+                z-index: 0;
+
+                @media (width <=1000px) {
+                    display: none;
+                }
+            }
+
+            /* パンパンの背景色 */
+
+
+            & figure img {
+                /* max-width: 375px; */
+                width: 30%;
+                min-width: 200px;
+                height: auto;
+
+                @media (width <=720px) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+
+    }
+
+    /* mainWrap終了 */
+
+    #aboutWrap {
+
+        .aboutContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            @media (width <=1000px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7rem;
+            }
+
+            .aboutImg {
+                width: 44%;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+                background-image: url(../image/aboutImg.jpeg);
+                background-size: cover;
+
+
+                @media (width <=1000px) {
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                }
+
+                @media (width <=720px) {
+                    width: 100%;
+                    height: 375px;
+                }
+
+            }
+
+            .aboutTitle {
+                width: 44%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                gap: 5rem;
+
+                @media (width <=720px) {
+                    width: 100%;
+                }
+
+                & h2 {
+                    width: 100%;
+                    font-family: 'Kumar One', serif;
+                    font-size: 4.5rem;
+
+                    @media (width <=720px) {
+                        font-size: 3rem;
+                    }
+                }
+
+                & img {
+                    max-width: 80%;
+
+                }
+            }
+
+
+            .aboutPanda01 img {
+                @media (width <=1000px) {
+                    width: 240px;
+                    height: auto;
+                }
+            }
+        }
+
+        .aboutSec {
+            margin-top: 10rem;
+            /* text-align: center; */
+
+            @media (width <=1000px) {
+                margin-top: 5rem;
+            }
+
+            @media (width <=720px) {
+                margin-top: 3rem;
+            }
+
+            & h3 {
+                width: 100%;
+                color: #FF2121;
+                font-size: 3rem;
+                text-align: center;
+                padding-bottom: 3rem;
+                margin: 0 auto;
+
+                @media (width <=1000px) {
+                    font-size: 2rem;
+                }
+
+                @media (width <=720px) {
+                    width: 100%;
+                    font-size: 1.8rem;
+                    margin: 0 auto;
+                    /* margin-bottom: 2rem; */
+                }
+
+            }
+
+            .aboutTitole01 {
+                @media (width <=1190px) {
+                    max-width: 27rem;
+                }
+
+                @media (width <=1000px) {
+                    max-width: 18rem;
+                }
+
+                @media (width <=720px) {
+                    max-width: 16.2rem;
+                }
+
+            }
+
+            & p {
+                margin: 0 auto;
+                text-align: start;
+                width: 100%;
+
+            }
+
+
+            .aboutText01 {
+                text-align: center;
+
+                @media (width <=1560px) {
+                    max-width: 27rem;
+                    text-align: start;
+                }
+            }
+
+            .aboutText02 {
+                text-align: center;
+
+                @media (width <=1560px) {
+                    max-width: 33rem;
+                    text-align: start;
+                }
+            }
+        }
+
+        .naruto3 {
+            display: flex;
+            gap: 10rem;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10rem;
+
+            @media (width <=1000px) {
+                gap: 3rem;
+                padding-top: 5rem;
+            }
+
+            @media (width <=720px) {
+                padding-top: 3rem;
+            }
+
+            & img {
+                width: 40px;
+                height: auto;
+                transform: rotate(90deg);
+
+                @media (width <=1000px) {
+                    width: 20px;
+                    height: auto;
+                }
+            }
+
+        }
+
+        .pandaImg {
+            margin-top: 10rem;
+
+            & img {
+                width: 30%;
+                min-width: 200px;
+
+                @media (width <=720px) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+
+    }
+
+
+    /* aboutWrappre終了 */
+
+    #menuWrap {
+        .menuTop {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            /* gap: 14rem; */
+
+
+            @media (width <=1000px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7rem;
+            }
+
+
+            .menuImg {
+                width: 44%;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+                background-image: url(../image/menuImg.jpeg);
+                background-size: cover;
+
+                @media (width <=1000px) {
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    background-position: bottom;
+                }
+
+                @media (width <=720px) {
+                    width: 100%;
+                    height: 375px;
+                }
+
+            }
+
+            & h2 {
+                width: 44%;
+                font-family: 'Kumar One', serif;
+                font-size: 4.5rem;
+
+                @media (width <=720px) {
+                    font-size: 3rem;
+                }
+            }
+
+        }
+
+        /* menuTopここまで */
+
+        #cafeWrap,
+        #sweetsWrap,
+        #foodsWrap {
+            text-align: center;
+
+            & h2 {
+                font-family: 'Kumar One', serif;
+                font-size: 3rem;
+                margin: 7rem auto;
+
+                @media (width <=720px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .menuContainer {
+                text-align: center;
+                /* padding-left: 3rem;
+                    padding-right: 3rem; */
+                /* display: flex;
+                    justify-content: space-between;
+                    gap: 5rem; */
+
+                .swiper-slide {
+                    width: 100%;
+                    opacity: .3;
+                    /* 左右のスライドを薄くする */
+                    transform: scale(.7);
+                    /* 左右のスライドを小さくする */
+                    transition: 1s;
+                    /* ゆっくり小さくさせる */
+
+
+                }
+
+                .swiper-slide img {
+                    height: auto;
+                    width: 100%;
+                }
+
+                .swiper-slide-active {
+                    opacity: 1;
+                    /* 中央のスライドは薄くしない */
+                    transform: scale(1);
+                    /* 中央のスライドは小さくしない */
+                    z-index: 1;
+                    /* 中央のスライドを一番上にする */
+                }
+
+                .menuBox {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+
+                    & img {
+                        /* width: 200px; */
+                        width: 280px;
+
+                        @media (width <=1000px) {
+                            width: 200px;
+                        }
+
+                        @media (width <=750px) {
+                            width: 150px;
+                        }
+                    }
+
+                    .menuItems {
+                        width: 274px;
+                        height: auto;
+                        background-color: #FF2121;
+                        color: #ffffff;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @media (width <=1000px) {
+                            width: 200px;
+                        }
+
+                        @media (width <=750px) {
+                            width: 150px;
+                        }
+
+                        & h3 {
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #foodsWrap {
+            padding-bottom: 10rem;
+        }
+
+        .naruto1 {
+            text-align: center;
+            padding-top: 4rem;
+
+
+            & img {
+                width: 40px;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    /* menuWrap終了 */
+
+
+    #accessWrap {
+
+        .accessContainer {
+            display: flex;
+            justify-content: space-between;
+
+            @media (width <=1000px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7rem;
+            }
+
+            .accessImg {
+                width: 44%;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+                background-image: url(../image/cafeImg.jpeg);
+                background-size: cover;
+
+                @media (width <=1000px) {
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    background-position: bottom;
+                }
+
+                @media (width <=720px) {
+                    width: 100%;
+                    height: 375px;
+                }
+
+
+            }
+
+            .accessTitle {
+                width: 44%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                gap: 5rem;
+
+
+                @media (width <=720px) {
+                    width: 100%;
+                }
+
+                & h2 {
+                    font-family: 'Kumar One', serif;
+                    font-size: 4.5rem;
+
+                    @media (width <=720px) {
+                        font-size: 3rem;
+                    }
+                }
+
+                & img {
+                    max-width: 440px;
+                }
+            }
+
+
+        }
+
+        .mapTitle {
+            font-family: 'Kumar One', serif;
+            font-size: 3rem;
+            text-align: center;
+            padding: 8rem 0 4rem 0;
+        }
+
+        .map {
+            width: 100%;
+            height: 320px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 320px;
+        }
+    }
+
+    /* accessWrap終了 */
+
+    #snsWrap {
+        width: 100%;
+        margin: 0 auto;
+
+        & h2 {
+            font-family: 'Kumar One', serif;
+            font-size: 3rem;
+            text-align: center;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+
+        .wrapper {
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding-bottom: 4rem;
+
+
+            @media (width <=1000px) {
+                flex-direction: column;
+            }
+
+            .tiktokbox,
+            .twitterbox {
+                max-width: 400px;
+            }
+        }
+
+
+        .snscontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* tiktok埋め込みに存在している余分な余白を除去するための記述。
+            .tiktok-embedというクラスが余白を作っていますのでそれを強めのセレクタ方法で上書き
+            （.tiktok-embedのみで指定すると効きません） */
+        .snscontainer .tiktok-embed {
+            margin: 0 auto;
+        }
+    }
+}
+
+/* mainWrapper終了 */
+
+/* main終了 */
+
+& footer {
+
+    background-color: #FF2121;
+    padding: 1rem 0;
+    text-align: center;
+    color: #ffffff;
+
+}
